@@ -1,0 +1,65 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://api.themoviedb.org/3/movie/1?api_key=7db23d5f5bb8b528017c07093abb8912&append_to_response=credits,reviews
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.3.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Content-Type:
+      - application/json;charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Date:
+      - Mon, 23 May 2022 18:09:33 GMT
+      Server:
+      - openresty
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - GET, HEAD, POST, PUT, DELETE, OPTIONS
+      Access-Control-Expose-Headers:
+      - ETag, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, Retry-After,
+        Content-Length, Content-Range
+      Cache-Control:
+      - public, max-age=28800
+      X-Memc:
+      - MISS
+      X-Memc-Key:
+      - 5ef0f36e1049afbcf98468dc8b67d701f1298abf
+      X-Memc-Age:
+      - '0'
+      X-Memc-Expires:
+      - '17330'
+      Vary:
+      - Accept-Encoding
+      X-Cache:
+      - Error from cloudfront
+      Via:
+      - 1.1 d0aba1ed008065dfa80f3b92c85f7e52.cloudfront.net (CloudFront)
+      X-Amz-Cf-Pop:
+      - BOS50-C1
+      X-Amz-Cf-Id:
+      - ECQAp_wpxz6jRwCmgdMlI0CKTbp1xMcJqL1Wg58rdbFIN4q64FU7AA==
+      Age:
+      - '1653'
+    body:
+      encoding: ASCII-8BIT
+      string: '{"success":false,"status_code":34,"status_message":"The resource you
+        requested could not be found."}'
+  recorded_at: Mon, 23 May 2022 18:37:06 GMT
+recorded_with: VCR 6.1.0
