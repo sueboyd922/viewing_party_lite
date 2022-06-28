@@ -18,6 +18,8 @@ class PartiesController < ApplicationController
       if params[:users].present?
         params[:users].each do |user|
           PartyUser.create(user_id: user, party: new_party, host: false)
+          require "pry"; binding.pry
+          InvitationNotifierMailer.invite(user, new_party).deliver_now
         end
       end
       PartyUser.create(user_id: params[:host] , party: new_party, host: true)
